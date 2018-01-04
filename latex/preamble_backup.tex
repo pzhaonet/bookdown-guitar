@@ -1,0 +1,120 @@
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\usepackage{framed,color}
+\definecolor{shadecolor}{RGB}{248,248,248}
+
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.8}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\floatpagefraction}{0.75}
+
+\let\oldhref\href
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+
+\makeatletter
+\newenvironment{kframe}{%
+\medskip{}
+\setlength{\fboxsep}{.8em}
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+
+\usepackage{makeidx}
+\makeindex
+
+\urlstyle{tt}
+
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+
+
+\usepackage{xunicode}
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Microsoft YaHei}
+
+
+%\usepackage{geometry}
+%\setlength{\parindent}{0pt}
+%\setlength{\textwidth}{7.2in}
+
+\usepackage{gchords}
+
+\newcommand\mychords{
+\def\chordsize{1.6mm}   % distance between two frets (and two strings)
+\font\fingerfont=cmr5  % font used for numbering fingers
+\font\namefont=cmr10    % font used for labeling of the chord
+\font\fretposfont=cmr7  % font used for the fret position marker
+\def\dampsymbol{{\tiny$\scriptstyle\times$}} %  `damp this string' marker
+}
+
+\renewcommand\yoff{3}
+\renewcommand\fingsiz{1.6}
+
+\newcommand{\AsevenMaj}{\chord{t}{x,n,p2,p1,p2,n}{A7+}}
+\newcommand{\Aseven}{\chord{t}{x,n,p2,n,p2,n}{A7}}
+\newcommand{\A}{\chord{t}{x,n,p2,p2,p2,n}{A}}
+\newcommand{\Am}{\chord{t}{n,n,p2,p2,p1,n}{Am}}
+\newcommand{\Amfive}{\chord{{5~}}{p1,p3,p3,p1,p1,p1}{Am(5)}}
+\newcommand{\Bb}{\chord{t}{f1p1,f1p1,p3,p3,p3,f1p1}{$^b$B}}
+\newcommand{\BmseveN}{\chord{t}{x,p2,p4,p3,p3,p2}{Bm7+}}
+\newcommand{\BmsevenA}{\chord{t}{x,n,p4,p4,p3,n}{Bm/A}}
+\newcommand{\Bmseven}{\chord{t}{x,p2,p4,p2,p3,p2}{Bm7}}
+\newcommand{\Bm}{\chord{t}{x,p2,p4,p4,p3,p2}{Bm}}
+\newcommand{\BM}{\chord{t}{f1p2,f1p2,p4,p4,p4,f1p2}{B}}
+\newcommand{\Bseven}{\chord{t}{x,f1p2,p4,f1p2,p4,f1p2,}{B7}}
+\newcommand{\BMseven}{\chord{t}{n,p2,p1,p2,n,p2}{B7}}
+\newcommand{\BsevenBasDs}{\chord{t}{x,x,p1,p2,n,p2}{B7/D\#}}
+\newcommand{\CM}{\chord{t}{n,p3,p2,n,p1,n}{C}}
+\newcommand{\CssevenLight}{\chord{t}{x,p4,p3,p4,p2,x}{C\#7}}
+\newcommand{\Csthree}{\chord{{4~}}{f1p1,f1p1,p3,p3,p3,f1p1}{$^\#$C}}
+\newcommand{\Cthree}{\chord{{3~}}{f1p1,f1p1,p3,p3,p3,f1p1}{C(3)}}
+\newcommand{\Cseven}{\chord{t}{n,p3,p2,p3,p1,n}{C7}}
+\newcommand{\Cm}{\chord{t}{f1p3,f1p3,p5,p5,p4,f1p3}{Cm}}
+\newcommand{\Csm}{\chord{{4~}}{f1p1,f1p1,p3,p3,p2,f1p1}{\#Cm}}
+\newcommand{\DmBasB}{\chord{t}{x,p2,p3,p2,p3,x}{Dm/B}}
+\newcommand{\DseveN}{\chord{t}{x,x,n,p2,p2,p2}{D7+}}
+\newcommand{\Dseven}{\chord{t}{x,x,n,p2,p1,p2}{D7}}
+\newcommand{\Dsix}{\chord{t}{x,x,n,p2,n,p2}{D6}}
+\newcommand{\D}{\chord{t}{x,x,n,p2,p3,p2}{D}}
+\newcommand{\Dm}{\chord{t}{x,x,n,p2,p3,p1}{Dm}}
+\newcommand{\Eb}{\chord{{6~}}{f1p1,f1p1,p3,p3,p3,f1p1}{$^b$E}}
+\newcommand{\E}{\chord{t}{n,p2,p2,p1,n,n}{E}}
+\newcommand{\Eseven}{\chord{{7~}}{f1p1,f1p1,p3,p3,p3,f1p1}{E(7)}}
+\newcommand{\EseveNNine}{\chord{t}{n,f1p2,f1p2,p4,p3,f1p2,}{E79}}
+\newcommand{\EseveN}{\chord{t}{n,p2,p2,p4,p3,p4}{E7}}
+\newcommand{\EsevenFour}{\chord{t}{n,p2,p2,p4,p3,p5}{E7,11}}
+\newcommand{\Em}{\chord{t}{n,p2,p2,n,n,n}{Em}}
+\newcommand{\F}{\chord{t}{f1p1,p3,p3,p2,f1p1,f1p1}{F}}
+\newcommand{\Fs}{\chord{t}{f2p2,p4,p4,p3,f1p2,f1p2}{F\#}}
+\newcommand{\Fsmin}{\chord{t}{f1p2,p4,p4,f1p2,f1p2,f1p2,}{F\#m}}
+\newcommand{\FsminLight}{\chord{t}{x,x,f3p4,f1p2,f1p2,f1p2,}{F\#m}}
+\newcommand{\FsminBasSeveN}{\chord{t}{x,x,f3p3,f1p2,f1p2,f1p2,}{F\#m/E\#}}
+\newcommand{\FsminBasSeven}{\chord{t}{x,x,f2p2,f1p2,f1p2,f1p2,}{F\#m/E}}
+\newcommand{\FsminSeven}{\chord{t}{f1p2,p4,p4,f1p2,p5,f1p2,}{F\#7m}}
+\newcommand{\GM}{\chord{t}{p3,p2,n,n,n,p3}{G}}
+\newcommand{\Gsminseven}{\chord{t}{f2p4,x,f4p4,f4p4,f4p4,f4p4,}{G\#7}}
+\newcommand{\Gthree}{\chord{t}{f1p3,p5,p5,p4,f1p3,f1p3}{G(3)}}
+\newcommand{\Gm}{\chord{{3~}}{f1p1,p3,p3,f1p1,f1p1,f1p1}{Gm}}
+\newcommand{\Gsm}{\chord{{4~}}{f1p1,p3,p3,f1p1,f1p1,f1p1}{\#Gm}}
+
+\frontmatter

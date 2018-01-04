@@ -1,0 +1,20 @@
+\cleardoublepage 
+
+# (APPENDIX) Appendix {-} 
+
+# 常用和弦指法图 {#toolbox .unnumbered}
+ 
+
+\chords{\iAsevenMaj \iAseven \iA \iAm \iAmfive}
+
+\chords{\iBb \iBmseveN \iBmsevenA \iBmseven \iBm \iBM \iBseven \iBMseven \iBsevenBasDs}
+
+\chords{\iCM \iCssevenLight \iCsthree \iCthree \iCseven \iCm \iCsm}
+
+\chords{\iDmBasB \iDseveN \iDseven \iDsix \iD \iDm}
+
+\chords{\iEb \iE \iEseven \iEseveNNine \iEseveN \iEsevenFour \iEm}
+
+\chords{\iF \iFs \iFsmin \iFsminLight \iFsminBasSeveN \iFsminBasSeven \iFsminSeven}
+
+\chords{\iGM \iGsminseven \iGthree \iGm \iGsm}

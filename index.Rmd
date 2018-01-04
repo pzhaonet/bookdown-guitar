@@ -1,0 +1,93 @@
+--- 
+title: "GuitaR Bookdown"
+author: "大鹏"
+site: bookdown::bookdown_site
+date: "`r Sys.Date()`"
+description: "This is a collection of my favorite songs with guitar chords, produced by bookdown."
+github-repo: "pzhaonet/boookdown-guitar"
+cover-image: "images/cover.jpg"
+url: 'https\://bookdown.org/baydap/bdguitar/'
+documentclass: ctexbook
+classoption: openany
+colorlinks: no
+lot: no
+lof: no
+geometry: [a4paper, tmargin=2cm, bmargin=2cm, lmargin=1.5cm, rmargin=1.5cm]
+---
+
+# 前言 {#front .unnumbered} 
+
+最真的梦，就是用R语言的bookdown把R代码、作图、数据分析和吉他谱弄到一起。
+
+啥？弄到一起有什么用？
+
+呃......容我清清脑子想一想......
+
+越过下面这座山丘，却发现无人等候……
+
+```{r, echo=5, out.width='60%'}
+ z <- 2 * volcano        # Exaggerate the relief
+ x <- 10 * (1:nrow(z))   # 10 meter spacing (S to N)
+ y <- 10 * (1:ncol(z))   # 10 meter spacing (E to W)
+ par(mar = c(0,0,0,0))
+ persp(x, y, z, theta = 120, phi = 15, scale = FALSE, 
+       axes = FALSE)
+```
+
+终会有\Am 一天　把心愿\Dm 完成　带着你\F 飞奔\GM 找永\Cm 恒\Csthree \Cthree  
+
+$$\int_0^\infty e^{-x^2} dx=\frac{\sqrt{\pi}}{2}$$
+ 
+本书的吉他谱，在网页上看不见，只有点击下载pdf才能看见哦。
+
+\mainmatter
+
+# 用R bookdown记吉他谱 {#method .unnumbered} 
+
+## 简介 {#intro .unnumbered}
+
+前情提要：
+
+- [用 R 语言的 bookdown 写书](http://dapengde.com/archives/19122)
+- [用 R 语言的 bookdown 写诗集](http://dapengde.com/archives/19150)
+- [用 R  语言的 bookdown 写学术论文](http://dapengde.com/archives/19190)
+- [R 语言 bookdown 快速入门和语法速查](http://dapengde.com/archives/19141)
+
+本篇说说如何用 R  语言的 bookdown 写吉他谱。别拦着我，让我陷进bookdown的怀抱里爽死吧。
+
+中国的民谣吉他伴奏谱常见的一般是六线谱，格式是这样的：
+
+![](images/chengdu1-.jpg)
+
+- 第一行是和弦谱，包括和弦名称和左手按琴弦的指法图；
+- 第二行是六线谱，右手拨弦的方式（当然也夹杂左手按和弦外音的变化）；
+- 第三行是歌曲旋律的简谱；
+- 第四行是歌词。
+
+前两行的和弦谱和六线谱在录入时需要专业软件，太麻烦；歌曲旋律一般是跟着原唱学，基本用不着；歌词最容易录入。由于和弦谱最为重要，任何乐器伴奏都用得着，为了省事儿，上图可以只保留和弦名称和歌词，简化为文字谱：
+
+      C    Em     F     G    C    Em
+    让我掉下眼泪的不只昨夜的酒，让我依依不舍的不……
+
+文字谱的好处是用不着任何专业软件，录入很方便。但是，这比较坑菜鸟。想不起来`Em`和弦的指法该怎么办？`Em`还好办，看见个`G#7sus4`，我崩溃了，自认水平不行，乖乖翻和弦字典去。如果标注了指法图——
+
+让\CM 我掉下\Em 眼泪的　不\F 只昨夜的\GM 酒　让\CM 我依依\Em 不……
+
+还是更方便一些，吉他和钢琴都可以用。我觉得等我老得掉光牙齿的时候，估计连C和弦的指法都忘光了，给孙子连个《成都》都唱不成，这时候指法图就有用了。
+
+以前我玩过[\(\LaTeX\)输入指法图](http://dapengde.com/archives/18230)的游戏。由于对\(\LaTeX\)心怀恐惧，这个游戏没敢多玩。现在有了R语言的bookdown来取代\(\LaTeX\)，自然想把这个游戏拿回来找找年轻的感觉。
+
+这个主意早就有了，原以为会很麻烦（恐惧心理），一直没行动。昨天在送大娃和接二娃之间空出半个小时，鼓捣了一下，居然鼓捣出来了上面那个样子。其实很简单：用 bookdown 的壳，\(\LaTeX\)的核。上面那句歌词，录入的文字是这样的：
+
+    让\CM 我掉下\Em 眼泪的　不\F 只昨夜的\GM 酒　让\CM 我依依\Em 不舍的　不……
+
+我打算以后陆陆续续把喜欢的歌弄成一本书，并且把bookdown录入吉他谱的源代码在[GitHub开了个bookdown-guitar的项目](https://github.com/dapengde/bookdown-guitar)。毕竟，中文的对齐不太完美，看看有没有高手来帮帮我。
+
+其实跟\(\LaTeX\)里一样。那我在\(\LaTeX\)里用就行了，干嘛来bookdown里用？
+
+因为这样的话，就可以在同一本书里同时呈现R代码、作图、分析结果和吉他谱啊。
+
+啊？把他们弄在一起有什么用？
+
+呃……这是个好问题……容我清清脑子想一想……听说数学领域很多理论在提出时都没啥用，后来都用上了，除了数论……我不会运气跟数论一样好吧……
+
