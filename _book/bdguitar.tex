@@ -81,6 +81,9 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\usepackage[normalem]{ulem}
+% avoid problems with \sout in headers with hyperref:
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
 \IfFileExists{parskip.sty}{%
 \usepackage{parskip}
 }{% else
@@ -282,7 +285,7 @@
 
 \title{GuitaR Bookdown}
 \author{大鹏}
-\date{2017-11-07}
+\date{2018-01-04}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -462,11 +465,12 @@ The \GM baffled king com\Em -posing Halle\Am -lujah
 Halle\F -lujah, Halle\CM -lujah Halle\F -lujah, Halle
 \CM -lu\GM -\CM jah
 
-Your faith was strong But you needed proof
+Your \CM  faith \sout{was} \textbf{strong} But you \Am needed
+\href{https://utopian.io}{proof}
 
-You saw her bathing On the roof
+You \CM saw her bathing \Am On the roof
 
-Her beauty and the Moonlight overthrew you
+Her \F beauty and the Moonlight \CM overthrew you \GM
 
 She tied you to a kitchen chair
 
